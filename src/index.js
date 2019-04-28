@@ -1,8 +1,14 @@
 import dva from 'dva';
-import './index.css';
+import {createBrowserHistory as createHistory} from 'history'
+
+//引入 normalize样式 css reset
+import 'normalize.css'
+//引入布局样式
+//
+import './assets/css/common.css'
 
 // 1. Initialize
-const app = dva();
+const app = dva({history:createHistory()});
 
 // 2. Plugins
 // app.use({});
