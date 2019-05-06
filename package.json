@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "antd": "^3.16.6",
+    "axios": "^0.18.0",
     "dva": "^2.4.1",
     "normalize.css": "^8.0.1",
     "react": "^16.2.0",
