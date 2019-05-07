@@ -1,0 +1,75 @@
+.add_Groups {
+  position: relative;
+  width: 80px;
+  height: 32px;
+  display: flex;
+  background-color: #007fff;
+  border-radius: 3px;
+  .mainbtn {
+    outline: none;
+    border: none;
+    width: 64px;
+    height: 100%;
+    background-color: transparent;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.1);
+    }
+  }
+  .morebtn {
+    outline: none;
+    width: 15px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    border-left: 1px solid hsla(0, 0%, 100%, 0.1);
+    cursor: pointer;
+    transition: all 0.5s;
+
+    > i {
+      display: block;
+      margin-top: 5px;
+      margin-left: 3px;
+      height: 0;
+      width: 0;
+      border-width: 4px;
+      border-color: #fff transparent transparent transparent;
+      border-style: solid;
+    }
+
+    &:hover {
+      background-color: rgba($color: #000000, $alpha: 0.1);
+    }
+  }
+  ul {
+    position: absolute;
+    top: 32px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    margin: 0;
+    padding: 5px 0;
+    background-color: #fff;
+    border: 1px solid #ebebeb;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    li {
+      list-style: none;
+      height: 26px;
+      line-height: 26px;
+      font-size: 14px;
+      color: #3b76c5;
+      cursor: pointer;
+      box-sizing: border-box;
+      padding-left: 10px;
+      &:hover {
+        background-color: #f9f9f9;
+      }
+    }
+  }
+}
