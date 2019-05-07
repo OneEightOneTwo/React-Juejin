@@ -6,18 +6,21 @@ import Books from './routes/Books/Books.jsx';
 import Events from './routes/Events/Events.jsx';
 import Pins from './routes/Pins/Pins.jsx';
 import Topics from './routes/Topics/Topics.jsx';
+import User from './routes/User/User.jsx';
 
 function RouterConfig({ history }) {
   return (
     <Router history={history}>
       <React.Fragment>
-        <Header />
+        <Route path='/' component={Header} />
         <Switch>
           <Route path='/welcome' component={Welcome} />
           <Route path='/books' component={Books} />
           <Route path='/events' component={Events} />
           <Route path='/pins' component={Pins} />
           <Route path='/topics' component={Topics} />
+          {/* TODO用户有关的的嵌套路由 */}
+          <Route path='/user/:id' component={User} />
           {/* 匹配不到路由就重定向到welcome */}
           <Redirect to='/welcome' />
         </Switch>
