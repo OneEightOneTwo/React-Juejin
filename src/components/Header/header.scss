@@ -69,16 +69,18 @@
         background-repeat: no-repeat;
         background-position: center center;
       }
-    }
-    .active {
-      border-color: #007fff;
-      span {
-        background-image: url('../../assets/images/juejin-search-icon-focus.470748c.svg');
+      &.active {
+        border-color: #007fff;
+        span {
+          background-image: url('../../assets/images/juejin-search-icon-focus.470748c.svg');
+        }
       }
     }
+    
   }
   .usermsg {
     float: right;
+    height: 60px;
     .addbtn {
       float: left;
       height: 60px;
@@ -139,6 +141,7 @@
         box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
         .menu_group {
           padding: 12px 0;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.04);
           .menu_item {
             padding: 0 12px;
             height: 32px;
@@ -149,7 +152,7 @@
               color: #71777c;
               > i {
                 margin-right: 10px;
-                color: #71777c;
+                color: #b2bac2;
               }
             }
             &:hover {
@@ -157,6 +160,27 @@
             }
           }
         }
+      }
+    }
+    .write {
+      float: left;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 10px;
+      color: #007fff;
+    }
+    .login {
+      float: right;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ccc;
+      > span {
+        cursor: pointer;
+        color: #007fff;
       }
     }
   }

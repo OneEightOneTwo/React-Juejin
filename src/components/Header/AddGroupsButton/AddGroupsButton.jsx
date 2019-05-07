@@ -49,19 +49,18 @@ class AddGroupsButton extends Component {
             }
           ]
         }
-      ],
-      isShowDropbox: false
+      ]
     };
   }
   //点击切换显示下拉列表
   toggleDropBox = e => {
-    e.nativeEvent.stopImmediatePropagation();
-    let { isShowDropbox } = this.state;
-    this.setState({ isShowDropbox: !isShowDropbox });
+    this.props.cb(e);
   };
   render() {
     let { type } = this.props;
-    let { addGoups, isShowDropbox } = this.state;
+    let { addGoups } = this.state;
+    //是否显示下拉
+    let { isShowDropbox } = this.props;
     let buttonData = addGoups[type];
     return (
       <div className={className.add_Groups}>
@@ -86,11 +85,6 @@ class AddGroupsButton extends Component {
         </ul>
       </div>
     );
-  }
-  componentDidMount() {
-    document.addEventListener('click', e => {
-      this.setState({ isShowDropbox: false });
-    });
   }
 }
 

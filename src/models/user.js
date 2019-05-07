@@ -1,7 +1,7 @@
 export default {
   namespace: 'userinfo',
   state: {
-    isLoginIn: true,
+    isLoginIn: false,
     userinfo: {
       id:34123123,
       name: '',
@@ -18,6 +18,11 @@ export default {
     //退出
     *signOut({ payload }, { call, put }) {},
     //检测登陆状态
-    *loginStatus({ payload }, { call, out }) {}
+    *loginStatus({ payload }, { call, out }) {},
+    //注册
+    *signUp({ payload }, { call, put}) {
+      yield call('');
+      yield put({ type: ''})
+    }
   }
 };
